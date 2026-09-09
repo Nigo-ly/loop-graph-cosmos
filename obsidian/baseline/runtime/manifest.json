@@ -1,0 +1,9 @@
+{
+  "id": "my-life-homepage",
+  "name": "Loop Graph Cosmos",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Local research, evidence and versioned knowledge workbench (developer preview).",
+  "author": "nigo",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,29 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: obsidian/package-lock.json
+      - run: python -m pip install -r requirements.txt
+        working-directory: backend
+      - run: python -m pytest -q
+        working-directory: backend
+      - run: python scripts/demo.py --vault "$RUNNER_TEMP/cosmos-demo"
+        working-directory: backend
+      - run: npm ci --ignore-scripts
+        working-directory: obsidian
+      - run: npm test
+        working-directory: obsidian
+      - run: npm run build
+        working-directory: obsidian

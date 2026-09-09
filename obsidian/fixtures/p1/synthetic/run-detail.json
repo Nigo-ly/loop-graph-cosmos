@@ -1,0 +1,95 @@
+{
+  "_fixture_type": "synthetic",
+  "_notice": "All identifiers, sequences, timestamps, versions, budgets, and stop reasons in this file are invented for UI testing. No real run data is used.",
+  "contract_version": "2",
+  "generated_at": "2026-01-01T00:30:00+08:00",
+  "provider_version": "synthetic-provider",
+  "db_mode": "read_only",
+  "source_sequence": 100,
+  "source_committed_at": "2026-01-01T00:29:50+08:00",
+  "stale": false,
+  "run": {
+    "run_id": "synthetic-run-passed-0001",
+    "parent_run_id": "synthetic-parent-0001",
+    "loop_id": "synthetic-loop-alpha-v1",
+    "loopspec_version": "1",
+    "fragment_id": "synthetic-fragment-0101",
+    "goal": "synthetic goal: verify the detail view renders every contract field",
+    "status": "passed",
+    "display_state": "completed",
+    "current_node": "feedback",
+    "iterations": 5,
+    "worker_version": "synthetic-worker-v1",
+    "evaluator_version": "synthetic-evaluator-v1",
+    "budget_limits": { "active_tokens": 20000, "calls": 10, "seconds": 1200 },
+    "budget_used": { "active_tokens": 3100, "calls": 3, "elapsed_seconds": 640 },
+    "stop_reason": null,
+    "resume_condition": null,
+    "eval_results": { "hard_gates": { "passed": 8, "total": 8 }, "verdict": "pass" },
+    "unresolved_issues": [],
+    "timeline": [
+      {
+        "sequence": 1,
+        "event_type": "snapshot",
+        "node": null,
+        "created_at": "2026-01-01T00:10:00+08:00",
+        "summary": "synthetic initial checkpoint snapshot"
+      },
+      {
+        "sequence": 2,
+        "event_type": "run_registered",
+        "node": null,
+        "created_at": "2026-01-01T00:11:00+08:00",
+        "summary": "synthetic child loop registered"
+      },
+      {
+        "sequence": 3,
+        "event_type": "node_completed",
+        "node": "source_lock",
+        "created_at": "2026-01-01T00:12:00+08:00",
+        "summary": "synthetic source lock completed"
+      },
+      {
+        "sequence": 4,
+        "event_type": "node_completed",
+        "node": "claim_matrix",
+        "created_at": "2026-01-01T00:13:00+08:00",
+        "summary": "synthetic claim matrix completed"
+      },
+      {
+        "sequence": 5,
+        "event_type": "node_completed",
+        "node": "stop_policy_design",
+        "created_at": "2026-01-01T00:14:00+08:00",
+        "summary": "synthetic stop policy design completed"
+      },
+      {
+        "sequence": 6,
+        "event_type": "node_completed",
+        "node": "independent_eval",
+        "created_at": "2026-01-01T00:15:00+08:00",
+        "summary": "synthetic independent eval passed 8/8 hard gates"
+      },
+      {
+        "sequence": 7,
+        "event_type": "node_completed",
+        "node": "feedback",
+        "created_at": "2026-01-01T00:16:00+08:00",
+        "summary": "synthetic feedback node completed"
+      },
+      {
+        "sequence": 8,
+        "event_type": "loop_stopped",
+        "node": null,
+        "created_at": "2026-01-01T00:17:00+08:00",
+        "summary": "synthetic terminal state passed"
+      }
+    ],
+    "evidence_refs": [
+      "artifacts/synthetic-run-passed-0001/source_lock.md",
+      "artifacts/synthetic-run-passed-0001/claim_matrix.md"
+    ],
+    "artifact_refs": ["artifacts/synthetic-run-passed-0001/"],
+    "asset_refs": ["Notes/散记/碎片资产/synthetic-asset-0001.md"]
+  }
+}

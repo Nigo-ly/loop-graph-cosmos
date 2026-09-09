@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "faults": [
+    "rate_limited",
+    "timeout",
+    "disconnected",
+    "identity_drift",
+    "malformed_response",
+    "missing_cost",
+    "quota_exhausted",
+    "dns_rebind_private",
+    "redirect_to_loopback",
+    "non_https_endpoint",
+    "registry_crash_before_commit",
+    "ledger_crash_after_apply_before_receipt",
+    "keychain_create_put_replace_delete_cleanup",
+    "memory_18_warning",
+    "memory_20_pause",
+    "memory_22_registered_termination",
+    "memory_16_manual_resume",
+    "sample_order_drift",
+    "concurrent_registry_update",
+    "bounded_termination_timeout"
+  ]
+}

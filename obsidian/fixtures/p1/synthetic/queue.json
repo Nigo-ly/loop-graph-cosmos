@@ -1,0 +1,46 @@
+{
+  "_fixture_type": "synthetic",
+  "_notice": "All identifiers, sequences, timestamps, versions, budgets, and stop reasons in this file are invented for UI testing. No real run data is used.",
+  "contract_version": "2",
+  "generated_at": "2026-01-01T00:30:00+08:00",
+  "provider_version": "synthetic-provider",
+  "db_mode": "read_only",
+  "source_sequence": 100,
+  "source_committed_at": "2026-01-01T00:29:50+08:00",
+  "stale": false,
+  "items": [
+    {
+      "run_id": "synthetic-queue-0001",
+      "fragment_id": "synthetic-fragment-0001",
+      "status": "approved",
+      "display_state": "queued",
+      "source_file": "Notes/散记/碎片想法/synthetic-fragment-0001.md",
+      "next_step": "选择业务 LoopSpec 与独立 Verifier",
+      "updated_at": "2026-01-01T00:01:00+08:00",
+      "loop_id": "synthetic-loop-queue-v1",
+      "goal": "合成目标：待路由碎片整理样例"
+    },
+    {
+      "run_id": "synthetic-queue-0002",
+      "fragment_id": "synthetic-fragment-0002",
+      "status": "approved",
+      "display_state": "queued",
+      "source_file": "Notes/散记/碎片想法/synthetic-fragment-0002.md",
+      "next_step": "选择业务 LoopSpec 与独立 Verifier",
+      "updated_at": "2026-01-01T00:02:00+08:00",
+      "loop_id": "synthetic-loop-queue-v1",
+      "goal": "合成目标：待路由碎片整理样例"
+    },
+    {
+      "run_id": "synthetic-queue-0003",
+      "fragment_id": "synthetic-fragment-0003",
+      "status": "approved",
+      "display_state": "queued",
+      "source_file": "Notes/散记/碎片想法/synthetic-fragment-0003.md",
+      "next_step": "选择业务 LoopSpec 与独立 Verifier",
+      "updated_at": "2026-01-01T00:03:00+08:00",
+      "loop_id": "synthetic-loop-queue-v1",
+      "goal": "合成目标：待路由碎片整理样例"
+    }
+  ]
+}

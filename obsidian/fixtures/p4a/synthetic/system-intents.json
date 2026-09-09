@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "intents": [
+    {"type": "add_provider", "requester": "nigo", "payload_summary": {"provider_id": "synthetic-provider-a", "secret_configured": true}},
+    {"type": "test_provider", "requester": "nigo", "payload_summary": {"provider_id": "synthetic-provider-a"}},
+    {"type": "assign_role", "requester": "nigo", "payload_summary": {"provider_id": "synthetic-provider-a", "role": "worker"}},
+    {"type": "enable_provider", "requester": "nigo", "payload_summary": {"provider_id": "synthetic-provider-a"}},
+    {"type": "immediate_scan", "requester": "nigo", "payload_summary": {"scan_slot": "manual-synthetic-001"}},
+    {"type": "resource_resume", "requester": "nigo", "payload_summary": {"resource_sequence": 16, "manual": true}}
+  ]
+}

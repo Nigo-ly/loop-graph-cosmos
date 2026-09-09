@@ -1,0 +1,341 @@
+{
+  "source": "current-alignments.json captured 2026-09-09; public task selection fields only; no lineage inferred",
+  "items": [
+    {
+      "fragment_id": "2026-08-09-19-24-04-7c1d1f41",
+      "title": "持续学习技术路线综述：从外挂记忆到自我修改",
+      "alignment_id": "align:4c295190d45d5122fff79a53",
+      "sequence": 384,
+      "revision": 1,
+      "status": "passed",
+      "route": "verify",
+      "updated_at": "2026-08-09T11:40:23.622121+00:00",
+      "execution": {
+        "run_id": "exec:fragment-intent:586453724a9a916c46cc18ba",
+        "status": "passed",
+        "subscription_selected": true,
+        "research_progress": {
+          "stage": "researching",
+          "cognitive": "collecting",
+          "collected_sources": 0,
+          "model_calls": 0,
+          "model_calls_unknown": true,
+          "model_call_count_basis": "observed_cli_turns_lower_bound",
+          "agent_invocations": 0,
+          "provider": null,
+          "network_requests": 0,
+          "network_request_count_basis": "completed_read_and_search_actions",
+          "note": "系统正在围绕原问题查阅证据和形成判断；原问题尚未完成。"
+        },
+        "research_result_digest": null,
+        "result_digest": "ad2856395ccc40315c92d20e711ff7d398264266f3f6d84b1de3c0f95782a272",
+        "result": {
+          "escalation_reason": "",
+          "harvest": [
+            {
+              "maturity": "candidate",
+              "qualification_basis": null,
+              "role": "failure",
+              "summary": "公开来源发现未得到可复核结果。"
+            }
+          ],
+          "model_calls": 0,
+          "needs_escalation": false,
+          "next_checks": [
+            "稍后重试公开来源发现，或补充一个明确的官方／仓库链接。"
+          ],
+          "summary": "本次公开来源发现没有取得可复核结果，不能据此判断原始说法为真。",
+          "tool_calls": 2,
+          "unknowns": [
+            "官方发布状态与社区可复现情况仍未核实"
+          ]
+        },
+        "knowledge_publication": null,
+        "updated_at": "2026-09-08T22:32:15.571684+00:00"
+      }
+    },
+    {
+      "fragment_id": "2026-08-26-17-14-24-0a72bff7",
+      "title": "Qwen3.8-Flash-Next预告Qwen4架构：125B参数激活6B，51B N-gram外挂记忆与QSA稀疏注意力",
+      "alignment_id": "align:70f59861c8dfc834611971f3",
+      "sequence": 424,
+      "revision": 1,
+      "status": "passed",
+      "route": "verify",
+      "updated_at": "2026-08-27T08:16:35.605758+00:00",
+      "execution": {
+        "run_id": "exec:fragment-intent:6fbdcab00621400a45cfae68",
+        "status": "passed",
+        "subscription_selected": true,
+        "research_progress": {
+          "stage": "collected",
+          "cognitive": "capability_offline",
+          "collected_sources": 0,
+          "stop_reason": "live_disabled",
+          "model_calls": 0,
+          "network_requests": 0,
+          "rounds": [],
+          "coverage": {
+            "status": "unassessed",
+            "covered": [],
+            "gaps": [
+              "release"
+            ]
+          },
+          "candidate_coverage": {
+            "covered": [],
+            "gaps": [
+              "release"
+            ]
+          },
+          "conflicts": [],
+          "plan_exhausted": false,
+          "note": "本轮未取得可核验证据。"
+        },
+        "research_result_digest": null,
+        "result_digest": "8c187936a788d436c321782fbbce437ddf09131f34c957a5f5021231eb25a1dc",
+        "result": {
+          "escalation_reason": "",
+          "harvest": [
+            {
+              "maturity": "candidate",
+              "qualification_basis": null,
+              "role": "failure",
+              "summary": "受治理研究本轮未取得可核验证据。"
+            }
+          ],
+          "model_calls": 0,
+          "needs_escalation": false,
+          "next_checks": [
+            "稍后重试公开来源发现，或补充一个明确的官方／仓库链接。"
+          ],
+          "summary": "本轮未取得可核验证据。",
+          "tool_calls": 0,
+          "unknowns": [
+            "本轮未取得可核验证据，不能据此判断原始说法为真。"
+          ]
+        },
+        "knowledge_publication": null,
+        "updated_at": "2026-09-08T22:32:41.709890+00:00"
+      }
+    },
+    {
+      "fragment_id": "2026-08-26-17-14-24-0a72bff7",
+      "title": "Qwen3.8-Flash-Next预告Qwen4架构：125B参数激活6B，51B N-gram外挂记忆与QSA稀疏注意力",
+      "alignment_id": "align:f08dacfb1943b73b44a1f676",
+      "sequence": 431,
+      "revision": 1,
+      "status": "passed",
+      "route": "verify",
+      "parent_run_id": "exec:fragment-intent:6fbdcab00621400a45cfae68",
+      "parent_episode_id": "episode:8bb8460e65fc3dc62071302b",
+      "continuation_goal": "继续核验“Qwen3.8-Flash-Next预告Qwen4架构：125B参数激活6B，51B N-gram外挂记忆与QSA稀疏注意力”的官方来源；优先检查与当前主张直接相关的官方发布页、官方仓库或一手资料，若仍无证据则明确停止原因。",
+      "updated_at": "2026-08-28T03:39:25.100116+00:00",
+      "execution": {
+        "run_id": "exec:fragment-intent:240f565ab07f7d27633431aa",
+        "status": "passed",
+        "subscription_selected": false,
+        "research_progress": {
+          "stage": "collected",
+          "cognitive": "capability_offline",
+          "collected_sources": 0,
+          "stop_reason": "live_disabled",
+          "model_calls": 0,
+          "network_requests": 0,
+          "rounds": [],
+          "coverage": {
+            "status": "unassessed",
+            "covered": [],
+            "gaps": [
+              "release"
+            ]
+          },
+          "candidate_coverage": {
+            "covered": [],
+            "gaps": [
+              "release"
+            ]
+          },
+          "conflicts": [],
+          "plan_exhausted": false,
+          "note": "本轮未取得可核验证据。"
+        },
+        "research_result_digest": null,
+        "result_digest": "8c187936a788d436c321782fbbce437ddf09131f34c957a5f5021231eb25a1dc",
+        "result": {
+          "escalation_reason": "",
+          "harvest": [
+            {
+              "maturity": "candidate",
+              "qualification_basis": null,
+              "role": "failure",
+              "summary": "受治理研究本轮未取得可核验证据。"
+            }
+          ],
+          "model_calls": 0,
+          "needs_escalation": false,
+          "next_checks": [
+            "稍后重试公开来源发现，或补充一个明确的官方／仓库链接。"
+          ],
+          "summary": "本轮未取得可核验证据。",
+          "tool_calls": 0,
+          "unknowns": [
+            "本轮未取得可核验证据，不能据此判断原始说法为真。"
+          ]
+        },
+        "knowledge_publication": null,
+        "updated_at": "2026-08-28T03:39:25.171095+00:00"
+      }
+    },
+    {
+      "fragment_id": "2026-08-26-17-14-24-0a72bff7",
+      "title": "Qwen3.8-Flash-Next预告Qwen4架构：125B参数激活6B，51B N-gram外挂记忆与QSA稀疏注意力",
+      "alignment_id": "align:5e09ee708a9e5548b2c61f45",
+      "sequence": 438,
+      "revision": 1,
+      "status": "passed",
+      "route": "verify",
+      "parent_run_id": "exec:fragment-intent:240f565ab07f7d27633431aa",
+      "parent_episode_id": "episode:94787828d4f8f25ec594e225",
+      "continuation_goal": "继续核验“Qwen3.8-Flash-Next预告Qwen4架构：125B参数激活6B，51B N-gram外挂记忆与QSA稀疏注意力”的官方来源；优先检查与当前主张直接相关的官方发布页、官方仓库或一手资料，若仍无证据则明确停止原因。",
+      "updated_at": "2026-08-28T03:44:40.437009+00:00",
+      "execution": {
+        "run_id": "exec:fragment-intent:ba33450fcdabf3421670b079",
+        "status": "passed",
+        "subscription_selected": false,
+        "research_progress": {
+          "stage": "collected",
+          "cognitive": "capability_offline",
+          "collected_sources": 0,
+          "stop_reason": "live_disabled",
+          "model_calls": 0,
+          "network_requests": 0,
+          "rounds": [],
+          "coverage": {
+            "status": "unassessed",
+            "covered": [],
+            "gaps": [
+              "release"
+            ]
+          },
+          "candidate_coverage": {
+            "covered": [],
+            "gaps": [
+              "release"
+            ]
+          },
+          "conflicts": [],
+          "plan_exhausted": false,
+          "note": "本轮未取得可核验证据。"
+        },
+        "research_result_digest": null,
+        "result_digest": "8c187936a788d436c321782fbbce437ddf09131f34c957a5f5021231eb25a1dc",
+        "result": {
+          "escalation_reason": "",
+          "harvest": [
+            {
+              "maturity": "candidate",
+              "qualification_basis": null,
+              "role": "failure",
+              "summary": "受治理研究本轮未取得可核验证据。"
+            }
+          ],
+          "model_calls": 0,
+          "needs_escalation": false,
+          "next_checks": [
+            "稍后重试公开来源发现，或补充一个明确的官方／仓库链接。"
+          ],
+          "summary": "本轮未取得可核验证据。",
+          "tool_calls": 0,
+          "unknowns": [
+            "本轮未取得可核验证据，不能据此判断原始说法为真。"
+          ]
+        },
+        "knowledge_publication": null,
+        "updated_at": "2026-08-28T03:44:40.499197+00:00"
+      }
+    },
+    {
+      "fragment_id": "2026-08-26-17-14-24-0a72bff7",
+      "title": "Qwen3.8-Flash-Next预告Qwen4架构：125B参数激活6B，51B N-gram外挂记忆与QSA稀疏注意力",
+      "alignment_id": "align:8a442e2034bdc01a1f01d4cb",
+      "sequence": 445,
+      "revision": 1,
+      "status": "passed",
+      "route": "verify",
+      "parent_run_id": "exec:fragment-intent:ba33450fcdabf3421670b079",
+      "parent_episode_id": "episode:3077ca48df4c531d7222d695",
+      "recovery_reason": "offline_zero_evidence",
+      "continuation_goal": "继续公开核验：Qwen3.8-Flash-Next预告Qwen4架构：125B参数激活6B，51B N-gram外挂记忆与QSA稀疏注意力",
+      "updated_at": "2026-08-28T21:35:35.914291+00:00",
+      "execution": {
+        "run_id": "exec:fragment-intent:6b2421a35765641fb0b15290",
+        "status": "passed",
+        "subscription_selected": false,
+        "research_progress": {
+          "stage": "collected",
+          "cognitive": "capability_offline",
+          "collected_sources": 0,
+          "stop_reason": "capability_unavailable",
+          "model_calls": 0,
+          "network_requests": 2,
+          "rounds": [
+            {
+              "round": 1,
+              "kind": "initial",
+              "searches": 1,
+              "fetches": 0
+            },
+            {
+              "round": 2,
+              "kind": "replan",
+              "searches": 1,
+              "fetches": 0
+            }
+          ],
+          "coverage": {
+            "status": "unassessed",
+            "covered": [],
+            "gaps": [
+              "release"
+            ]
+          },
+          "candidate_coverage": {
+            "covered": [],
+            "gaps": [
+              "release"
+            ]
+          },
+          "conflicts": [],
+          "plan_exhausted": false,
+          "note": "本轮未取得可核验证据。"
+        },
+        "research_result_digest": null,
+        "result_digest": "3ff1b7a789942883ba3d004c75ffddb285acdd9e850bec21804af9a8909d1926",
+        "result": {
+          "escalation_reason": "",
+          "harvest": [
+            {
+              "maturity": "candidate",
+              "qualification_basis": null,
+              "role": "failure",
+              "summary": "受治理研究本轮未取得可核验证据。"
+            }
+          ],
+          "model_calls": 0,
+          "needs_escalation": false,
+          "next_checks": [
+            "稍后重试公开来源发现，或补充一个明确的官方／仓库链接。"
+          ],
+          "summary": "本轮未取得可核验证据。",
+          "tool_calls": 2,
+          "unknowns": [
+            "本轮未取得可核验证据，不能据此判断原始说法为真。"
+          ]
+        },
+        "knowledge_publication": null,
+        "updated_at": "2026-08-28T21:36:56.174154+00:00"
+      }
+    }
+  ]
+}

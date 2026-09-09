@@ -1,0 +1,14 @@
+{
+  "_fixture_type": "synthetic",
+  "_notice": "Healthy variant with a quiet database: data_age_seconds is large because no new Loop events exist, yet stale stays false. The console must render this normally without a stale badge.",
+  "contract_version": "2",
+  "generated_at": "2026-01-01T12:30:00+08:00",
+  "provider_version": "synthetic-provider",
+  "db_mode": "read_only",
+  "source_sequence": 137,
+  "source_committed_at": "2026-01-01T00:29:50+08:00",
+  "stale": false,
+  "provider_healthy": true,
+  "last_read_at": "2026-01-01T12:29:59+08:00",
+  "data_age_seconds": 43210
+}

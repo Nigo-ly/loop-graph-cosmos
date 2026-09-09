@@ -1,0 +1,40 @@
+{
+  "_fixture_type": "synthetic",
+  "_notice": "Invented data for P2B UI tests. No real run data is used.",
+  "contract_version": "2",
+  "generated_at": "2026-01-01T00:30:00+08:00",
+  "provider_version": "synthetic-provider",
+  "db_mode": "read_only",
+  "source_sequence": 100,
+  "source_committed_at": "2026-01-01T00:29:50+08:00",
+  "stale": false,
+  "run": {
+    "run_id": "synthetic-run-running-0001",
+    "parent_run_id": null,
+    "loop_id": "synthetic-loop-1",
+    "loopspec_version": "1",
+    "fragment_id": "synthetic-fragment-0001",
+    "goal": "synthetic running goal",
+    "status": "running",
+    "display_state": "running",
+    "current_node": "worker",
+    "iterations": 2,
+    "worker_version": "synthetic-worker-v1",
+    "evaluator_version": "synthetic-evaluator-v1",
+    "budget_limits": { "active_tokens": 20000, "calls": 10, "seconds": 1200 },
+    "budget_used": { "active_tokens": 5000, "calls": 4, "elapsed_seconds": 700 },
+    "stop_reason": null,
+    "resume_condition": null,
+    "eval_results": null,
+    "unresolved_issues": [],
+    "timeline": [
+      { "sequence": 5, "event_type": "snapshot", "node": null, "created_at": "2026-01-01T00:10:00+08:00", "summary": "synthetic snapshot" },
+      { "sequence": 6, "event_type": "state_transition", "node": null, "created_at": "2026-01-01T00:11:00+08:00", "summary": "synthetic approved->running" },
+      { "sequence": 7, "event_type": "node_completed", "node": "source_lock", "created_at": "2026-01-01T00:12:00+08:00", "summary": "synthetic source lock completed" }
+    ],
+    "evidence_refs": ["artifacts/synthetic-run-running-0001/source_lock.md"],
+    "artifact_refs": [],
+    "asset_refs": [],
+    "updated_at": "2026-01-01T00:12:30+08:00"
+  }
+}

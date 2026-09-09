@@ -1,0 +1,4 @@
+anthropic==0.116.0
+python-dotenv==1.2.2
+pygments==2.20.0
+pytest==9.1.1

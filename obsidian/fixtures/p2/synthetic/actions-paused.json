@@ -1,0 +1,21 @@
+{
+  "_fixture_type": "synthetic",
+  "_notice": "Invented data for P2B UI tests. No real run data is used.",
+  "contract_version": "1",
+  "generated_at": "2026-01-01T00:30:00+08:00",
+  "service_version": "synthetic-control",
+  "data": {
+    "run_id": "synthetic-run-paused-0002",
+    "status": "paused",
+    "latest_sequence": 12,
+    "priority": 3,
+    "actions": {
+      "pause": { "enabled": false, "reason_code": "invalid_state" },
+      "resume": { "enabled": true, "reason_code": null },
+      "terminate": { "enabled": true, "reason_code": null },
+      "retry": { "enabled": false, "reason_code": "loopspec_unavailable" },
+      "priority": { "enabled": true, "reason_code": null }
+    }
+  },
+  "error": null
+}

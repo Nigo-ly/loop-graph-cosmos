@@ -1,0 +1,123 @@
+{
+  "_fixture_type": "synthetic",
+  "_notice": "All identifiers, sequences, timestamps, versions, budgets, and stop reasons in this file are invented for UI testing. No real run data is used.",
+  "contract_version": "2",
+  "generated_at": "2026-01-01T00:30:00+08:00",
+  "provider_version": "synthetic-provider",
+  "db_mode": "read_only",
+  "source_sequence": 100,
+  "source_committed_at": "2026-01-01T00:29:50+08:00",
+  "stale": false,
+  "items": [
+    {
+      "run_id": "synthetic-run-passed-0001",
+      "parent_run_id": "synthetic-parent-0001",
+      "loop_id": "synthetic-loop-alpha-v1",
+      "fragment_id": "synthetic-fragment-0101",
+      "status": "passed",
+      "display_state": "completed",
+      "current_node": "feedback",
+      "iterations": 5,
+      "events": 13,
+      "evaluator_version": "synthetic-evaluator-v1",
+      "budget_used": {
+        "active_tokens": 3100,
+        "calls": 3,
+        "elapsed_seconds": 640
+      },
+      "stop_reason": null,
+      "updated_at": "2026-01-01T01:00:00+08:00",
+      "goal": "合成目标：验证样例停止策略设计是否可复用",
+      "subject": "合成主题：停止策略复用验证",
+      "subject_source": "user_text"
+    },
+    {
+      "run_id": "synthetic-run-exhausted-0002",
+      "parent_run_id": "synthetic-parent-0002",
+      "loop_id": "synthetic-loop-beta-v1",
+      "fragment_id": "synthetic-fragment-0102",
+      "status": "exhausted",
+      "display_state": "stopped",
+      "current_node": "worker",
+      "iterations": 2,
+      "events": 11,
+      "evaluator_version": "synthetic-evaluator-v1",
+      "budget_used": {
+        "active_tokens": 20000,
+        "calls": 10,
+        "elapsed_seconds": 1200
+      },
+      "stop_reason": "token_budget_exhausted",
+      "updated_at": "2026-01-01T02:00:00+08:00",
+      "goal": "合成目标：研究超额预算场景的停止行为",
+      "subject": "合成主题：超额预算停止行为",
+      "subject_source": "user_text"
+    },
+    {
+      "run_id": "synthetic-run-escalated-0003",
+      "parent_run_id": "synthetic-parent-0003",
+      "loop_id": "synthetic-loop-gamma-v1",
+      "fragment_id": "synthetic-fragment-0103",
+      "status": "escalated",
+      "display_state": "awaiting_human",
+      "current_node": "independent_eval",
+      "iterations": 3,
+      "events": 13,
+      "evaluator_version": "synthetic-evaluator-v1",
+      "budget_used": {
+        "active_tokens": 5000,
+        "calls": 4,
+        "elapsed_seconds": 700
+      },
+      "stop_reason": "awaiting_experiment_approval",
+      "updated_at": "2026-01-01T03:00:00+08:00",
+      "goal": "合成目标：等待人工批准的能力映射实验",
+      "subject": "合成主题：能力映射实验审批",
+      "subject_source": "user_note"
+    },
+    {
+      "run_id": "synthetic-run-blocked-0004",
+      "parent_run_id": "synthetic-parent-0004",
+      "loop_id": "synthetic-loop-delta-v1",
+      "fragment_id": "synthetic-fragment-0104",
+      "status": "blocked",
+      "display_state": "stopped",
+      "current_node": "source_lock",
+      "iterations": 1,
+      "events": 8,
+      "evaluator_version": "synthetic-evaluator-v1",
+      "budget_used": {
+        "active_tokens": 0,
+        "calls": 0,
+        "elapsed_seconds": 120
+      },
+      "stop_reason": "source_unreachable",
+      "updated_at": "2026-01-01T04:00:00+08:00",
+      "goal": "合成目标：核验不可达来源的锁定流程",
+      "subject": "合成主题：不可达来源锁定",
+      "subject_source": "user_text"
+    },
+    {
+      "run_id": "synthetic-run-running-0005",
+      "parent_run_id": "synthetic-parent-0005",
+      "loop_id": "synthetic-loop-epsilon-v1",
+      "fragment_id": "synthetic-fragment-0105",
+      "status": "running",
+      "display_state": "running",
+      "current_node": "worker",
+      "iterations": 2,
+      "events": 6,
+      "evaluator_version": "synthetic-evaluator-v1",
+      "budget_used": {
+        "active_tokens": 1200,
+        "calls": 1,
+        "elapsed_seconds": 300
+      },
+      "stop_reason": null,
+      "updated_at": "2026-01-01T05:00:00+08:00",
+      "goal": "合成目标：进行中的碎片整理样例",
+      "subject": "合成主题：进行中的碎片整理",
+      "subject_source": "user_text"
+    }
+  ]
+}

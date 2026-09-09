@@ -1,0 +1,9 @@
+{
+  "_fixture_type": "synthetic",
+  "_notice": "Invented data for P2B UI tests. No real run data is used.",
+  "contract_version": "1",
+  "generated_at": "2026-01-01T00:30:00+08:00",
+  "service_version": "synthetic-control",
+  "data": { "items": [] },
+  "error": null
+}

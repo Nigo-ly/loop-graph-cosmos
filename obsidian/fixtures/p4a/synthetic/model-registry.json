@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "providers": [
+    {
+      "provider_id": "synthetic-provider-a",
+      "endpoint": "https://models.example.test/v1/responses",
+      "adapter": "responses_compatible",
+      "model_id": "synthetic-worker-a",
+      "model_family": "synthetic-family-a",
+      "context_limit": 128000,
+      "output_limit": 4096,
+      "capabilities": ["structured_output", "tool_calling"],
+      "privacy": "private",
+      "cost_unit": "synthetic-token",
+      "quota_pool": "synthetic-pool-a",
+      "concurrency_limit": 2,
+      "enabled": false,
+      "config_version": 1,
+      "identity_status": "identity_unverified",
+      "role": "worker"
+    },
+    {
+      "provider_id": "synthetic-provider-b",
+      "endpoint": "https://models.example.test/v1/responses",
+      "adapter": "responses_compatible",
+      "model_id": "synthetic-evaluator-b",
+      "model_family": "synthetic-family-b",
+      "context_limit": 128000,
+      "output_limit": 4096,
+      "capabilities": ["structured_output"],
+      "privacy": "private",
+      "cost_unit": "synthetic-token",
+      "quota_pool": "synthetic-pool-b",
+      "concurrency_limit": 2,
+      "enabled": false,
+      "config_version": 1,
+      "identity_status": "identity_unverified",
+      "role": "evaluator"
+    }
+  ]
+}

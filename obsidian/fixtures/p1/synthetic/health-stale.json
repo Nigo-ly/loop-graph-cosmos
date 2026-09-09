@@ -1,0 +1,14 @@
+{
+  "_fixture_type": "synthetic",
+  "_notice": "Stale-state variant: the provider cannot complete a fresh read-only confirmation, so stale is true and last-known data must render with a stale badge. Silence alone never causes this state.",
+  "contract_version": "2",
+  "generated_at": "2026-01-01T00:30:00+08:00",
+  "provider_version": "synthetic-provider",
+  "db_mode": "read_only",
+  "source_sequence": 100,
+  "source_committed_at": "2026-01-01T00:29:50+08:00",
+  "stale": true,
+  "provider_healthy": false,
+  "last_read_at": "2026-01-01T00:05:00+08:00",
+  "data_age_seconds": 10
+}

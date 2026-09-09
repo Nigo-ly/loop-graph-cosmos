@@ -1,0 +1,72 @@
+{
+  "_fixture_type": "synthetic",
+  "_notice": "Invented data for P2B UI tests. No real run data is used.",
+  "contract_version": "1",
+  "generated_at": "2026-01-01T00:30:00+08:00",
+  "service_version": "synthetic-control",
+  "data": {
+    "items": [
+      {
+        "intent_id": "synthetic-intent-0004",
+        "idempotency_key": "dddd000000000000000000000000000000000000000000000000000000000004",
+        "run_id": "synthetic-run-running-0001",
+        "action": "pause",
+        "arguments": {},
+        "requester": "nigo",
+        "expected_sequence": 7,
+        "status": "accepted",
+        "reason_code": null,
+        "result_run_id": null,
+        "applied_sequence": null,
+        "created_at": "2026-01-01T00:29:00+08:00",
+        "updated_at": "2026-01-01T00:29:01+08:00"
+      },
+      {
+        "intent_id": "synthetic-intent-0003",
+        "idempotency_key": "dddd000000000000000000000000000000000000000000000000000000000003",
+        "run_id": "synthetic-run-running-0001",
+        "action": "retry",
+        "arguments": {},
+        "requester": "nigo",
+        "expected_sequence": 5,
+        "status": "failed",
+        "reason_code": "internal_error",
+        "result_run_id": null,
+        "applied_sequence": null,
+        "created_at": "2026-01-01T00:20:00+08:00",
+        "updated_at": "2026-01-01T00:20:02+08:00"
+      },
+      {
+        "intent_id": "synthetic-intent-0002",
+        "idempotency_key": "dddd000000000000000000000000000000000000000000000000000000000002",
+        "run_id": "synthetic-run-running-0001",
+        "action": "terminate",
+        "arguments": {},
+        "requester": "nigo",
+        "expected_sequence": 4,
+        "status": "rejected",
+        "reason_code": "stale_sequence",
+        "result_run_id": null,
+        "applied_sequence": null,
+        "created_at": "2026-01-01T00:10:00+08:00",
+        "updated_at": "2026-01-01T00:10:02+08:00"
+      },
+      {
+        "intent_id": "synthetic-intent-0001",
+        "idempotency_key": "dddd000000000000000000000000000000000000000000000000000000000001",
+        "run_id": "synthetic-run-running-0001",
+        "action": "pause",
+        "arguments": {},
+        "requester": "nigo",
+        "expected_sequence": 3,
+        "status": "applied",
+        "reason_code": null,
+        "result_run_id": null,
+        "applied_sequence": 4,
+        "created_at": "2026-01-01T00:01:00+08:00",
+        "updated_at": "2026-01-01T00:01:02+08:00"
+      }
+    ]
+  },
+  "error": null
+}
