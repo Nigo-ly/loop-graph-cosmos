@@ -279,6 +279,7 @@ def _execute(
     *,
     network_hosts: tuple[str, ...] = (),
     extra_env: dict[str, str] | None = None,
+    runtime_read_roots: tuple[Path, ...] = (),
 ) -> dict[str, Any]:
     sandbox = shutil.which("sandbox-exec")
     if not sandbox:
@@ -300,6 +301,7 @@ def _execute(
         "/private/var/db/dyld",
         str(Path(argv[0]).parent),
         str(work),
+        *(str(path.resolve()) for path in runtime_read_roots),
     ]
     profile = ('(version 1)(deny default)(allow process*)(allow sysctl-read)'
                '(allow mach-lookup)(allow file-read-metadata)(allow file-read* (literal "/"))')
@@ -636,6 +638,9 @@ def _node_dependencies(root: Path, work: Path) -> dict[str, Any]:
         prep,
         work,
         max(1, min(60, deadline - time.monotonic())),
+        # npm may live outside Homebrew (e.g. a selected Node toolchain).
+        # Permit this exact package tree, never its enclosing home directory.
+        runtime_read_roots=(Path(npm).resolve().parent.parent,),
     )
     if result["status"] == "completed" and result["exit_code"] == 0:
         target = root / "node_modules"

@@ -16,3 +16,5 @@ obsidian/dist/
 coverage/
 .codegraph/
 **/.obsidian/
+backend/research-vault/
+backend/research-data/

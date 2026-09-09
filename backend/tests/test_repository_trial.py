@@ -180,7 +180,7 @@ def test_offline_npm_install_ignores_scripts_and_runs_dependency(
     root, content = _npm_fixture(tmp_path)
     monkeypatch.setattr(trial, "_download", lambda *args: content)
     prepared = trial._node_dependencies(root, tmp_path.resolve())
-    assert prepared["status"] == "ready", prepared
+    assert prepared["status"] == "ready", json.dumps(prepared, ensure_ascii=False, indent=2)
     assert not list(tmp_path.rglob("executed"))
     script = root / "probe.js"
     script.write_text("console.log(require('leaf'))")
@@ -927,3 +927,25 @@ def test_official_release_action_survives_library_save_and_null_revision_is_reje
         assert receipt["archive_scope"] == "official_release"
         assert receipt["release_version"] == "1.0.0"
         assert receipt["archive_sha256"] == hashlib.sha256(wheel).hexdigest()
+
+
+@pytest.mark.skipif(not shutil.which("sandbox-exec") or not shutil.which("npm"), reason="native npm unavailable")
+def test_offline_npm_reads_selected_external_toolchain_but_not_adjacent_files(tmp_path, monkeypatch):
+    original_which = shutil.which
+    installed = Path(original_which("npm")).resolve()
+    runtime = tmp_path / "external-runtime" / "npm"
+    shutil.copytree(installed.parent.parent, runtime, symlinks=True)
+    selected_npm = runtime / "bin" / installed.name
+    secret = tmp_path / "outside-private.txt"
+    secret.write_text("must remain unreadable")
+    work = tmp_path / "isolated-work"
+    work.mkdir()
+    root, content = _npm_fixture(work)
+    monkeypatch.setattr(shutil, "which", lambda name: str(selected_npm) if name == "npm" else original_which(name))
+    monkeypatch.setattr(trial, "_download", lambda *args: content)
+    prepared = trial._node_dependencies(root, work.resolve())
+    assert prepared["status"] == "ready", json.dumps(prepared, indent=2)
+    script = root / "probe.js"
+    script.write_text("console.log(require('leaf'));try {require('fs').readFileSync(" + json.dumps(str(secret)) + ");process.exit(2)}catch(e){console.log('denied')}")
+    result = _execute(validate_command(["node", "probe.js"], root), root, work.resolve(), 5)
+    assert result["exit_code"] == 0 and "leaf works" in result["output"] and "denied" in result["output"]

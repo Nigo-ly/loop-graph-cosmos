@@ -60,25 +60,28 @@ npm run build
 
 离线模式不会形成新的模型结论。真实研究需要用户自己安装并登录支持的 **Kimi Code 或 Codex CLI**，且当前方案允许这种调用方式。项目不提供账户、订阅或免费模型额度。
 
-先停止后端。在 `backend` 目录生成一次固定起点，保留这个文件，不要每次启动都重新生成：
+先停止后端。真实研究使用新的空 Vault，避免将合成演示混入正式知识。用 Obsidian 打开 `backend/research-vault`，并按步骤 3 安装插件；API 与 Obsidian 必须使用这个同一目录。
+
+在 `backend` 目录创建它并生成一次固定起点，保留起点文件，不要每次启动都重新生成：
 
 ```sh
-python -c 'from datetime import datetime, UTC; from pathlib import Path; p=Path("data/public-after.txt"); p.open("x").write(datetime.now(UTC).isoformat())'
+mkdir -p research-data research-vault/candidates research-vault/assets "research-vault/Notes/散记/碎片想法"
+python -c 'from datetime import datetime, UTC; from pathlib import Path; p=Path("research-data/public-after.txt"); p.open("x").write(datetime.now(UTC).isoformat())'
 ```
 
 重新启动：
 
 ```sh
 python -m fragment_loop.cognitive_server \
-  --db "$PWD/data/loop.sqlite3" \
-  --graph-db "$PWD/data/graph.sqlite3" \
-  --vault-root "$PWD/demo-vault" \
-  --product-candidates-dir "$PWD/demo-vault/candidates" \
-  --product-assets-dir "$PWD/demo-vault/assets" \
+  --db "$PWD/research-data/loop.sqlite3" \
+  --graph-db "$PWD/research-data/graph.sqlite3" \
+  --vault-root "$PWD/research-vault" \
+  --product-candidates-dir "$PWD/research-vault/candidates" \
+  --product-assets-dir "$PWD/research-vault/assets" \
   --research-collect-live \
   --research-search-provider bing-cn \
   --subscription-provider kimi \
-  --subscription-new-public-after "$(cat data/public-after.txt)"
+  --subscription-new-public-after "$(cat research-data/public-after.txt)"
 ```
 
 可将 `kimi` 换为 `codex`。可执行文件从 PATH 发现，再尝试各自默认用户安装目录。凭据留在已登录 CLI 的本机配置中，不要写进此仓库。不要同时传 `--research-live`、`--research-model-live` 或 `--pilot-live`：这些是另外的付费 API 路径，当前教程不启用。

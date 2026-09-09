@@ -5,6 +5,7 @@ permissions:
 jobs:
   verify:
     runs-on: macos-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
