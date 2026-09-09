@@ -36,7 +36,12 @@ it('readable workbench has physical text sizes, contrast and responsive records 
       const stdout=await new Promise((resolve,reject)=>{
         const child=spawn(chrome,['--headless=new','--disable-gpu','--disable-background-networking','--disable-extensions','--disable-component-update','--no-first-run','--no-default-browser-check',`--user-data-dir=${path.join(dir,'profile-'+width)}`,`--window-size=${width},900`,'--force-device-scale-factor=1','--dump-dom','file://'+path.join(dir,'page.html')],{detached:true,stdio:['ignore','pipe','ignore']});
         let output='',finished=false;
-        const finish=error=>{if(finished)return;finished=true;clearTimeout(timer);try{process.kill(-child.pid,'SIGTERM');}catch{}if(error)reject(error);else resolve(output);};
+        const finish=error=>{
+          if(finished)return;finished=true;clearTimeout(timer);
+          // Wait for this isolated process group before removing its profile.
+          child.once('close',()=>{if(error)reject(error);else resolve(output);});
+          try{process.kill(-child.pid,'SIGKILL');}catch{}
+        };
         const timer=setTimeout(()=>finish(new Error('isolated Chromium did not report geometry')),20000);
         child.stdout.setEncoding('utf8');child.stdout.on('data',chunk=>{output+=chunk;if(/<output id="metrics">\{.*?\}<\/output>/s.test(output))finish();});child.on('error',finish);child.on('exit',code=>{if(!finished)finish(new Error('Chromium exited before geometry: '+code));});
       });

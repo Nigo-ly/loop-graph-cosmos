@@ -253,9 +253,9 @@ describe('built-in strict Mermaid to static knowledge SVG', () => {
           let output = ''; let finished = false;
           const finish = (error) => {
             if (finished) return; finished = true; clearTimeout(timer);
-            // Only this fixture's isolated Chrome process group is stopped.
-            try { process.kill(-child.pid, 'SIGTERM'); } catch {}
-            if (error) reject(error); else resolve(output);
+            // Wait for this isolated process group before removing its profile.
+            child.once('close', () => { if (error) reject(error); else resolve(output); });
+            try { process.kill(-child.pid, 'SIGKILL'); } catch {}
           };
           const timer = setTimeout(() => finish(new Error('Chromium did not return layout measurements')), 20000);
           child.stdout.setEncoding('utf8');
